@@ -1,0 +1,57 @@
+ONG Lea
+Td00 Maven
+
+EXO 1
+
+Maven est un outil de gestion et diffusion de code en Java (build system) : compiler sources d'un prog sans dépendre du S.E ou IDE & donc de créer de nouveaux projets.
+
+-> mvn [arg]
+
+Q4. Version de Maven installée sur la machine "mvn -v, --version" : Apache Maven 3.6.0
+Q5. Création projet : 
+
+	mvn archetype:generate -D archetypeArtifactId=maven-archetype-quickstart
+
+groupId -> Spécifie l'id unique du projet : permet de le distinguer des autres projets ayant un nom similaire.
+artifactId -> Spécifie l'id du jar,sources, fichiers bin..  qui seront crées pour le projet. 
+
+Dans le dossier il y aura : fichiers src et pom.xml 
+pom.xml -> description des étapes de compilation du projet (Arbre)
+
+
+Q11. maven.compiler.source : version du compilateur Java utilisée pour compiler les sources (Prochains TP mettre 1.8) càd signaler avant de compiler que le programme est écrit en code java 1.7
+     maven.compiler.targer : référence à la version du byte code généré après compilation qui peut être exécuter sur une version 1.8 ou ultérieur.
+
+Q6. Compiler le projet :
+	mvn compile
+ ->Nouveau dossier target :classes(contenant byte code), generated-sources et maven-status
+
+Q7. Exécuter le programme App :
+	java -cp target/classes fr.dauphine.ja.nomprenom.td00.App
+
+Q8. -cp permet de spécifier un class path -> chemin d'accès au répertoire où se trouvent les classes et packages pour les exécuter.
+
+
+EXO 2
+
+Fichiers JAR par défaut -> Fichiers Zip pour diffuser des programmes ou sources java
+Peut être executé directement : java -jar
+
+Créer archive jar : mvn package dans la racine du projet qui se trouvera dans le repertoire target
+Exécuter code avec l'archive jar :java -cp target/nom-du-jar\fr.dauphine.ja.nomprenom.td00.App
+Executer l'archive jar : java -jar target/nom-du-jar
+
+Q1. Quand execute que l'archive : aucun attribut manifest principal dans target/td00-1.0-SNAPSHOT.jar
+
+-> Ajouter fichier MANIFEST avec Main-Class : groupeId.App 
+Pour cela Maven Jar Plugin le fait auto lors de la création du jar il faut éditer le fichiers pom.xml
+
+EXO 3
+
+Q3. sysout puis Ctrl + Espace -> auto complétion de l'appel à System.out.println();
+Q4. Ou sinon proposition à des méthodes existante ou écrite tel que la méthode toString()
+Q5. méthode main
+Q6. auto complétion de l'appel des getteurs et setteurs
+Q7. Selection nom + Alt +Shift + R -> Rename
+Q8. Reference à l'open source de String en Java
+
