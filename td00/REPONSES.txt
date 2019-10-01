@@ -56,4 +56,28 @@ Q7. Selection nom + Alt +Shift + R -> Rename
 Q8. Reference à l'open source de String en Java
 
 Test Q5
+Td00Bis Git
+
+Exo 1 
+git init -> initialisé repertoire git
+git add [fichier] [..]
+git commit 
+
+Q2.Liste des fichiers faisant partie des sources du projet td00: le fichier src (.java et test) et pom.xml
+Q5. git diff -> visualise les modification fait sur le projet avec le dernier enregistrement
+Q7. gitk & -> visualisé historique du projet (changement...)
+Q9.git diff hash-commit-1 hash-commit-2 -> difference entre les deux commit
+Q10. git diff HEAD HEAD^ -> différence entre plus récent et celui qui prècede le dernier commit
+
+Exo 2 
+
+Q3. Les deux dépots sont synchronisés par Branche : master et remotes/origin/master
+Q5. L'ajout est impossible car il y a un conflit entre les deux branches les deux modification sur le fichiers
+Q6. git pull permet de synchroniser les deux branche donc recupérer ce que l'un a modifier.
+
+Exo 3
+
+Q2. Run As JUnit -> Execution 1/1, après changement junit failed
+La méthode assertTrue -> verifie si le parametre est vrai ou faux
+
 
