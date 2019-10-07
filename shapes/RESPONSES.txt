@@ -1,0 +1,49 @@
+ONG Lea
+
+Td01 Encaps Muta
+
+Exercice 1
+
+1. Cela fonctionne car par défaut un constructeur est crée et donc instancie les valeurs par défauts soit p.x=0.0 et p.y=0.0
+
+2. Il y a des champs non visibles car ils sont en privés dans la class Point. Pour y remédier il suffit d'implémenter les méthodes publics getteurs dans la class Point et faire appel dans la class TestPoint p.getX() et p.getY(). (Astuce Maj+Alt+S -> generate getters and setters) 
+
+3. Cela permet de protéger les informations contenues dans un objet et donc d'être modifié par exemple depuis l'extérieur.
+
+4. Un accesseur est une méthode permettant de récupérer le contenu d'un champ protégé. Oui dans le cas de la question 3. Nous l'avons définis précedemment dans la q2. les accesseurs getX() et getY().
+
+5.Lors de l'appel a Point p = new Point(); -> cela ne fonctionne plus car le constructeur par défaut est remplacé.
+
+6.Le fait de définir x=x et y=y ne fait aucun effet pour cela il faut dire faire appel à this.x=x et this.y=y pour dire que ce sont les attributs de la classes et non ceux en paramètres.
+
+7.Il suffit de créer une variable statique qui s'incrémente à chaque appel du constructeur et faire un accesseur de cette variable.
+		Point p1=new Point(1,2);
+		Point p2=p1;
+		Point p3=new Point(1,2);
+		System.out.println(Point.getNbPoint()); -> 2 car le p2 pointe vers p1 !
+ 
+8. Le compilateur sait quel constructeur appeler car il compare l'objet en paramètre et appel donc le bon constructeur ayant le même type.
+
+9. Définir la méthode toString ().
+
+Exercice 2
+
+1. p1==p2 -> true car p2 pointe sur la même zone mémoire du 1er point crée Point(1,2)
+   p1==p3 -> false car p3 pointe sur une autre zone mémoire lors de la création du 2eme Point(1,2)
+
+3. La liste contient p1. La méthode indexOf() renvoie l'indice de la 1ere occurence de la valeur cherchée et renvoie -1 si elle n'existe pas. Pour p2 comme celui ci pointe vers le point p1 alors sont indexof est celui ou se trouve p1 soit à l'indice 0 dans la liste. Contrairement à p3 qui pointe vers un Point qui ne se trouve pas dans la liste donc renvoie -1.
+
+indexOf (Object o) -> return o==null ? get(i)==null ; o.equals(get(i));
+Pour cela modifier la méthode equals.
+	public boolean equals(Object x) {
+		if( x instanceof Point) {
+			Point obj = (Point)x;
+			return obj.x==this.x && obj.y==this.y ;
+		}
+		return false;
+	}	
+
+Exercice 3
+
+
+
