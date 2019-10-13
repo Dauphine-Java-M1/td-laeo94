@@ -36,8 +36,5 @@ public class Ring extends Circle{
 		}
 		return false;
 	}
-	public static void main(String[] args) {
-		Ring r = new Ring(new Point(1,1),2,1);
-		System.out.println(r);
-	}
+	
 }

@@ -1,11 +1,16 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <properties>
+   <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+   <maven.compiler.source>1.8</maven.compiler.source>
+   <maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
   <modelVersion>4.0.0</modelVersion>
   <groupId>fr.dauphine.ja.onglea.shapes</groupId>
   <artifactId>shapes</artifactId>
   <packaging>jar</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>shapes</name>
+  <name>td00</name>
   <url>http://maven.apache.org</url>
   <dependencies>
     <dependency>
@@ -15,4 +20,21 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  <build>
+   <plugins>
+    <plugin>
+     <artifactId>maven-jar-plugin</artifactId>
+     <version>3.0.2</version>
+     <configuration>
+      <archive>
+       <manifest>
+        <mainClass>fr.dauphine.ja.onglea.shapes.TestPoint</mainClass>
+        <addClasspath>true</addClasspath>
+        <classpathPrefix>lib</classpathPrefix>
+       </manifest>
+      </archive>
+     </configuration>
+    </plugin>
+   </plugins>
+  </build>
 </project>
