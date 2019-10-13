@@ -49,6 +49,13 @@ public class Point
 		}
 		return false;
 	}	
+	
+	//Soit considérer de changer les coordonnées du point, soit comme en maths considéré comme étant un nouveau Point
+	public void translate(int dx, int dy) {
+		this.x=dx;
+		this.y=dy;
+	}
+	
 	public static void main( String[] args )
     {
 		Point p1=new Point(1,2);

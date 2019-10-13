@@ -45,5 +45,24 @@ Pour cela modifier la méthode equals.
 
 Exercice 3
 
+2. Si on dépasse la capacité fixée il y a une erreur, on ne peut ajouter un point
+5. Erreur on ne peut ajouter un pointeur null
+   Utilisation de Oject.requireNonNull() -> permettant de verifier si l'objet mis en paramètre est null et de lever une expection.
+6. pointCapacity() ne sert plus à rien car il n'y a pas de limite sur la taille d'une liste.
+   nbPoints() devient la taille actuel de la liste
+   contains() revient à utiliser la méthode contains de la liste.
+
+Exercice 4
+
+1. Soit on considère translate() étant une méthode void qui modifier les coodronnées du point, soit comme une méthode qui renvoie un nouveau Point avec les coordonnées en params.
+2.Si on considère comme étant un nouveau point, le translate ne fonctionne pas car il ne fait que renvoyé un nouveau point et translate donc celui ci et non le cercle initiale pour cela il faut donc considérer translate() comme étant void.
+
+9. On doit faire une méthode static afin qu'elle puisse être appelé sans instancié un circle.
+
+Exercice 5
+
+1. Oui il est intérressant d'utilisé l'héritage. Le Ring héritera de Circle ayant en plus un rayonInterne.
+
+4. Sans code supplémentaire, l'affichage sera celui de la class mère donc il y aura pas l'affichage du rayonInterne. Pour cela il suffit de redéfinir la méthode toString() de Ring faisant appel à la méthode mère et en ajoutant en plus l'affichage du rayonInterne.
 
 
