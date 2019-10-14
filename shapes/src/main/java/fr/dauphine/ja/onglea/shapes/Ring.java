@@ -30,7 +30,7 @@ public class Ring extends Circle{
 		return super.contains(p);
 	}
 	
-	public boolean contains(Point p, Ring...rings){
+	public static boolean contains(Point p, Ring...rings){
 		for(Ring r: rings) {
 			return r.contains(p);
 		}
