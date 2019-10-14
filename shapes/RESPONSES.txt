@@ -65,4 +65,11 @@ Exercice 5
 
 4. Sans code supplémentaire, l'affichage sera celui de la class mère donc il y aura pas l'affichage du rayonInterne. Pour cela il suffit de redéfinir la méthode toString() de Ring faisant appel à la méthode mère et en ajoutant en plus l'affichage du rayonInterne.
 
+TD2
+
+Exo 1
+
+5.paintComponent() -> est appelé lors du 1er affichage du JPanel et lorsqu'on fait appel a repaint();
+6.Le package SWING est une extension du package AWT. AWT ne prend pas en charge le modèle MVC tandis que SWING oui et il n'exige moins d'espace mémoire que l'AWT.
+
 

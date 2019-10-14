@@ -1,4 +1,4 @@
-package fr.dauphine.ja.onglea.shapes;
+package fr.dauphine.ja.onglea.shapes.model;
 
 import java.util.LinkedList;
 import java.util.Objects;
