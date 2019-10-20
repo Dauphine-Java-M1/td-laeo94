@@ -1,5 +1,7 @@
 package fr.dauphine.ja.onglea.shapes.model;
 
+import java.awt.Graphics;
+
 public class Ring extends Circle{
 	
 	private int rayonInterne;
@@ -27,14 +29,23 @@ public class Ring extends Circle{
 	@Override
 	public boolean contains(Point p) {
 		// TODO Auto-generated method stub
-		return super.contains(p);
+		return super.contains(p) &&
+				Math.sqrt((p.getX()-super.getCenter().getX())*(p.getX()-super.getCenter().getX())+(super.getCenter().getY()-p.getY()))>rayonInterne;
 	}
 	
 	public static boolean contains(Point p, Ring...rings){
 		for(Ring r: rings) {
-			return r.contains(p);
+			if(r.contains(p)) return true;
 		}
 		return false;
+	}
+
+	@Override
+	public void drawShape(Graphics g) {
+		// TODO Auto-generated method stub
+		super.drawShape(g);
+		g.drawOval(super.getCenter().getX()+rayonInterne,super.getCenter().getY()+rayonInterne,
+				(super.getCenter().getX()+super.getRayon())-rayonInterne*2,(super.getCenter().getY()+super.getRayon())-rayonInterne*2);
 	}
 	
 }

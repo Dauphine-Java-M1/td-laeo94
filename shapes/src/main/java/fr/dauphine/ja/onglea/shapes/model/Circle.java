@@ -1,6 +1,8 @@
 package fr.dauphine.ja.onglea.shapes.model;
 
-public class Circle {
+import java.awt.Graphics;
+
+public class Circle implements Shape {
 	
 	private Point center;
 	private int rayon;
@@ -27,7 +29,7 @@ public class Circle {
 		return center;
 	}
 	public double surface() {
-		return (rayon*rayon)/Math.PI;
+		return Math.pow(rayon, 2)*Math.PI;
 	}
 	
 	public boolean contains(Point p) {
@@ -37,10 +39,19 @@ public class Circle {
 	
 	public static boolean contains (Point p, Circle...circles) {
 		for(Circle c: circles) {
-			return c.contains(p);
+			if(c.contains(p)) return true;
 		}
 		return false;
 	}
+
+	public void drawShape(Graphics g) {
+		// TODO Auto-generated method stub
+		g.drawOval(center.getX(),center.getY(), center.getX()+rayon, center.getY()+rayon);
+		
+	}
+
+	
+
 	
 	
 }
