@@ -1,6 +1,7 @@
 package fr.dauphine.ja.onglea.shapes.model;
 
-import java.awt.Graphics;
+import fr.dauphine.ja.onglea.shapes.view.CircleDrawer;
+import fr.dauphine.ja.onglea.shapes.view.RingDrawer;
 
 public class Ring extends Circle{
 	
@@ -9,8 +10,15 @@ public class Ring extends Circle{
 	public Ring(Point center, int rayon,int rayonInterne) {
 		super(center, rayon);
 		this.rayonInterne=rayonInterne;
+		super.drawer= new RingDrawer(this);
 	}
 	
+
+
+	public int getRayonInterne() {
+		return rayonInterne;
+	}
+
 
 
 	public boolean equals(Object x) {
@@ -40,12 +48,5 @@ public class Ring extends Circle{
 		return false;
 	}
 
-	@Override
-	public void drawShape(Graphics g) {
-		// TODO Auto-generated method stub
-		super.drawShape(g);
-		g.drawOval(super.getCenter().getX()+rayonInterne,super.getCenter().getY()+rayonInterne,
-				(super.getCenter().getX()+super.getRayon())-rayonInterne*2,(super.getCenter().getY()+super.getRayon())-rayonInterne*2);
-	}
 	
 }

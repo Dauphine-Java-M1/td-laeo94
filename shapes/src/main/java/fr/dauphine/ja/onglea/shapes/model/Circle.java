@@ -1,8 +1,9 @@
 package fr.dauphine.ja.onglea.shapes.model;
 
-import java.awt.Graphics;
+import fr.dauphine.ja.onglea.shapes.view.CircleDrawer;
+import fr.dauphine.ja.onglea.shapes.view.Drawer;
 
-public class Circle implements Shape {
+public class Circle extends Shape {
 	
 	private Point center;
 	private int rayon;
@@ -11,6 +12,7 @@ public class Circle implements Shape {
 		super();
 		this.center = center;
 		this.rayon = rayon;
+		super.drawer=new CircleDrawer(this);
 	}
 	
 	public int getRayon() {
@@ -43,15 +45,5 @@ public class Circle implements Shape {
 		}
 		return false;
 	}
-
-	public void drawShape(Graphics g) {
-		// TODO Auto-generated method stub
-		g.drawOval(center.getX(),center.getY(), center.getX()+rayon, center.getY()+rayon);
-		
-	}
-
-	
-
-	
 	
 }

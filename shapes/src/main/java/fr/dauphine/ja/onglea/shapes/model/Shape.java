@@ -1,7 +1,7 @@
 package fr.dauphine.ja.onglea.shapes.model;
 
-import java.awt.Graphics;
+import fr.dauphine.ja.onglea.shapes.view.Drawer;
 
-public interface Shape {
-	public abstract void drawShape(Graphics g);
+public abstract class Shape {
+	public Drawer drawer;
 }
