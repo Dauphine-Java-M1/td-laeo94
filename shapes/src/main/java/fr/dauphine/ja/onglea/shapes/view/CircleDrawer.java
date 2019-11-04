@@ -13,7 +13,7 @@ public class CircleDrawer extends Drawer {
 	@Override
 	public void draw(Graphics g) {
 		// TODO Auto-generated method stub
-		g.drawOval(c.getCenter().getX(),c.getCenter().getY(), c.getCenter().getX()+c.getRayon(), c.getCenter().getY()+c.getRayon());
+		g.drawOval(c.getCenter().getX(),c.getCenter().getY(),c.getRayon(), c.getRayon());
 		
 	}
 

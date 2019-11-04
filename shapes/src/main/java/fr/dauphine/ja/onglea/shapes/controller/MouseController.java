@@ -7,6 +7,7 @@ import javax.swing.JFrame;
 
 import fr.dauphine.ja.onglea.shapes.model.Circle;
 import fr.dauphine.ja.onglea.shapes.model.Point;
+import fr.dauphine.ja.onglea.shapes.model.Ring;
 import fr.dauphine.ja.onglea.shapes.model.World;
 
 
@@ -26,9 +27,10 @@ public class MouseController implements MouseMotionListener {
 	public void mouseMoved(MouseEvent e) {
 		// TODO Auto-generated method stub
 		Point p = new Point(e.getX(),e.getY());
-		Circle c = new Circle(p,30);
+		Circle c = new Circle(p,100);
+		Ring r= new Ring(c,10);
 		w.getShapes().clear();
-		w.getShapes().add(c);
+		w.getShapes().add(r);
 		frame.repaint();
 	}
 

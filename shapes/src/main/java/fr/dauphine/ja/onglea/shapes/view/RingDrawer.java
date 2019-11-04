@@ -14,9 +14,9 @@ public class RingDrawer extends Drawer{
 	@Override
 	public void draw(Graphics g) {
 		// TODO Auto-generated method stub
-		g.drawOval(r.getCenter().getX(),r.getCenter().getY(),r.getCenter().getX()+r.getRayon(),r.getCenter().getY()+r.getRayon());
-		g.drawOval(r.getCenter().getX()+r.getRayonInterne(),r.getCenter().getY()+r.getRayonInterne(),
-				(r.getCenter().getX()+r.getRayon())-r.getRayonInterne()*2,(r.getCenter().getY()+r.getRayon())-r.getRayonInterne()*2);
+		g.drawOval(r.getC().getCenter().getX(),r.getC().getCenter().getY(),r.getC().getRayon(),r.getC().getRayon());
+		g.drawOval(r.getC().getCenter().getX()+r.getRayonInterne(),r.getC().getCenter().getY()+r.getRayonInterne(),
+				(r.getC().getRayon())-r.getRayonInterne()*2,(r.getC().getRayon())-r.getRayonInterne()*2);
 	}
 
 }

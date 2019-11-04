@@ -19,7 +19,7 @@ public class TestPoint {
 		System.out.println(Circle.contains(new Point(1,2),c));
 			
 		System.out.println("Test Ring");
-		Ring r = new Ring(new Point(1,1),2,1);
+		Ring r = new Ring(c,1);
 		System.out.println(r);
 		 
 	}

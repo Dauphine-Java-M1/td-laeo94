@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
@@ -34,13 +35,12 @@ public class MyDisplay extends JPanel{
 		JFrame frame = new JFrame("Java Avancé - Graphic Display");
 		frame.setSize(new Dimension(500,500));
 		frame.setVisible(true);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		World w = new World();
 		MyDisplay d = new MyDisplay(w);
 		MouseController m = new MouseController(w,frame);
 		frame.add(d);
 		frame.addMouseMotionListener(m);
-	
+		
 	}
 	
 }

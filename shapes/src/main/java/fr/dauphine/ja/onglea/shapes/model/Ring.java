@@ -1,20 +1,21 @@
 package fr.dauphine.ja.onglea.shapes.model;
 
-import fr.dauphine.ja.onglea.shapes.view.CircleDrawer;
 import fr.dauphine.ja.onglea.shapes.view.RingDrawer;
 
-public class Ring extends Circle{
+public class Ring extends Shape{
 	
+	private Circle c;
 	private int rayonInterne;
 
-	public Ring(Point center, int rayon,int rayonInterne) {
-		super(center, rayon);
+	public Ring(Circle c, int rayonInterne) {
+		this.c=c;
 		this.rayonInterne=rayonInterne;
 		super.drawer= new RingDrawer(this);
 	}
 	
-
-
+	public Circle getC() {
+		return c;
+	}
 	public int getRayonInterne() {
 		return rayonInterne;
 	}
@@ -24,21 +25,18 @@ public class Ring extends Circle{
 	public boolean equals(Object x) {
 		if( x instanceof Ring) {
 			Ring obj = (Ring)x;
-			return (obj.getCenter().equals(this.getCenter())) && (this.getRayon()==obj.getRayon()) && obj.rayonInterne==this.rayonInterne;
+			return obj.c.equals(c) && obj.rayonInterne==this.rayonInterne;
 		}
 		return false;
 	}
-	@Override
-	public String toString() {
-		// TODO Auto-generated method stub
-		return super.toString()+" rayonInterne :"+rayonInterne;
-	}
 	
-	@Override
+	public String toString() {
+		return c.toString()+" rayonInterne :"+rayonInterne;
+	}
+
 	public boolean contains(Point p) {
-		// TODO Auto-generated method stub
-		return super.contains(p) &&
-				Math.sqrt((p.getX()-super.getCenter().getX())*(p.getX()-super.getCenter().getX())+(super.getCenter().getY()-p.getY()))>rayonInterne;
+		return c.contains(p) &&
+				Math.sqrt((p.getX()-c.getCenter().getX())*(p.getX()-c.getCenter().getX())+(c.getCenter().getY()-p.getY()))>rayonInterne;
 	}
 	
 	public static boolean contains(Point p, Ring...rings){
