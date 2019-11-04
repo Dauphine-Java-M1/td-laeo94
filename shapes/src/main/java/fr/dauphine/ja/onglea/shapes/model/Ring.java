@@ -45,6 +45,11 @@ public class Ring extends Shape{
 		}
 		return false;
 	}
+	@Override
+	public void translate(int dx, int dy) {
+		// TODO Auto-generated method stub
+		c.translate(dx, dy);
+	}
 
 	
 }
