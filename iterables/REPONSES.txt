@@ -1,0 +1,10 @@
+ONG Léa
+TD Iterables
+
+Exo 1.
+
+Iterable juste parcourir objet et non getSize(); par exemple.
+4.	Souhaite que notre iterable soit plus qu'un iterable -> comme List mais sans implémenter toute les fonctions de List.
+	Pour cela utilisons AbstractList : contient toute les méthodes (addAll, iterator,..) sauf get et size donc il faudra implémenter ces fonctions pour que les autres méthodes utilisent ces 2 fonctions.
+	get(i) -> lb+i
+	size()-> ub-lb +1
