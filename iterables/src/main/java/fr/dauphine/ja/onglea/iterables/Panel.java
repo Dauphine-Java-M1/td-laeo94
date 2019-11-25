@@ -7,7 +7,7 @@ import java.util.List;
 
 public class Panel {
 
-	private static Iterator<Integer> panel1(int i, int j) {
+	protected static Iterator<Integer> panel1(int i, int j) {
 		return new Iterator <Integer>() { // instance class Anonyme
 			private int pos=i;
 
@@ -25,7 +25,7 @@ public class Panel {
 		};
 	}
 	
-	private static Iterable <Integer> panel2(int i, int j) {
+	protected static Iterable <Integer> panel2(int i, int j) {
 		// TODO Auto-generated method stub
 		return new Iterable <Integer>() {
 			
@@ -53,7 +53,7 @@ public class Panel {
 	}
 
 	
-	public static List<Integer> panel(int i, int j) {
+	protected static List<Integer> panel(int i, int j) {
 		// TODO Auto-generated method stub
 		return new AbstractList<Integer>() {
 
@@ -70,25 +70,5 @@ public class Panel {
 			}
 		};
 	}
-
-	public static void main( String[] args )
-	{
-		Iterator<Integer> it=panel1(1,5);
-		for(;it.hasNext();) //Test si it a un suivant
-			System.out.println(it.next()); //Affiche ce suivant donc 1 à 5
-		System.out.println();
-		for(int i:panel2(1,5))
-			System.out.println(i);
-		
-		System.out.println();
-		List<Integer> l = panel(3,6);
-		for(int i:l) {
-			System.out.println(i);//affiche 3 4 5 6 System.out.println(l.get(1)); //affiche 4
-		}
-	}
-
-
-
-
 
 }

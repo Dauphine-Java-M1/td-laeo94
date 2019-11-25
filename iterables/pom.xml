@@ -28,7 +28,7 @@
      <configuration>
       <archive>
        <manifest>
-        <mainClass>fr.dauphine.ja.onglea.iterables.Panel</mainClass>
+        <mainClass>fr.dauphine.ja.onglea.iterables.App</mainClass>
         <addClasspath>true</addClasspath>
         <classpathPrefix>lib</classpathPrefix>
        </manifest>
