@@ -11,7 +11,7 @@ import org.junit.Test;
 
 public class PanelTest {
 
-	@Test(expected=IllegalArgumentException.class)
+	@Test
 	public void panel1() {
 		Panel.panel(5, 1);
 	}

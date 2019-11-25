@@ -8,3 +8,25 @@ Iterable juste parcourir objet et non getSize(); par exemple.
 	Pour cela utilisons AbstractList : contient toute les méthodes (addAll, iterator,..) sauf get et size donc il faudra implémenter ces fonctions pour que les autres méthodes utilisent ces 2 fonctions.
 	get(i) -> lb+i
 	size()-> ub-lb +1
+	
+Exo 2.
+
+3.
+AbstractList et AbstractSequentialList les différences:
+AbstractSequentialList re-définis l'itérator donc pas besoin d'implémenter get et size(); Mais il faudra ré-implémenter les méthodes de la fonction iterator
+
+Interface List dangereux car compléxité selon le type de la List.
+AbstractList implémente toute les méthodes de List hors si list est chainée cela n'est pas efficace -> Utilisation de AbstractSequentialList
+Marqueur RandomAcces donc accès n'importe où.
+
+if (l instanceof RandomAccess ) {
+	return new AbstractList(){
+	 -> get();
+ 	->size();
+ 	}
+}else{
+	return new AbstractSequentialList<>(){
+		->listiterator();
+		-> size();
+	}
+}
