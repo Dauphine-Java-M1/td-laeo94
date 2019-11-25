@@ -83,7 +83,7 @@ public class Panel {
 		System.out.println();
 		List<Integer> l = panel(3,6);
 		for(int i:l) {
-			System.out.println(i);//affiche 3 4 5 65}6System.out.println(l.get(1)); //affiche 4
+			System.out.println(i);//affiche 3 4 5 6 System.out.println(l.get(1)); //affiche 4
 		}
 	}
 
