@@ -1,0 +1,18 @@
+ONG LEA
+
+TD4 genetics
+-----------------------
+
+Exo 1
+
+1) Signature de la méthode : renvoie type object  et paramètres : multitude d'arguments variables
+2) Mettre un argument obligatoire avec int i0, puis type multitude d'arguments qui peut être vide
+3) Interface Comparable<T> permet de comparer les objet de type paramétré T.
+   Il faudra que la méthode extends l'interface Comparable<T> pour qu'il soit comparableTo <T> 
+
+Exo 1
+
+1) Ne compile pas car ArrayList  de String ne sont pas des sous type de Liste d'Objet 
+(différent de Oui String sous type de Object)
+Pour cela utilisation des WildCards '?' correspond à n'importe quel type
+Permet de ne pas declarer le type
